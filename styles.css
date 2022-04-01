@@ -10,8 +10,9 @@
 
 
 .hovered {
-  background: lightblue;
-  color: blue;
+  transform: scale(1.1);
+  background-color: blue;
+  
 
 }
 
@@ -21,7 +22,7 @@
   width: 200px;
   height: 200px;
   flex: 1;
-  background: lightgrey;
+  border-style: solid;
   margin: 20px;
 
 }

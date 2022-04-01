@@ -29,12 +29,10 @@ function drawScreen() {
 function addEffects(e) {
 
   console.log(e);
-  e.target.style.background = 'orange';
-  //attempting to use classList to add color and remove, but unsure why it is not working
-  // e.target.classList.add('hovered')
+  e.target.classList.add('hovered')
 
   setTimeout(function () {
-    e.target.style.background = 'lightgrey';
+    e.target.classList.remove('hovered');
   }, 500);
 }
 
