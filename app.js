@@ -7,6 +7,10 @@ console.log(outerContainer);
 
 // have this function draw a 4x4 grid of boxes.
 function drawScreen() {
+  let drawScreenButton = document.createElement('button');
+  drawScreenButton.classList.add('drawScreenButton');
+  drawScreenButton.innerText = 'Redraw Screen';
+  outerContainer.appendChild(drawScreenButton);
   for (let index = 0; index < 16; index++) {
 
     //this creates the rows
