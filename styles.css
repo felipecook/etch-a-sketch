@@ -4,10 +4,33 @@
   justify-content: space-around;
   align-items: center;
   gap: 20px;
+  width: 970px;
 }
 
 
 .hovered {
   background: lightblue;
+  color: blue;
+
+}
+
+
+.row {
+  display: flex;
+  width: 200px;
+  height: 200px;
+  flex: 1;
+  background: lightgrey;
+
+}
+
+
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 200px;
+  flex: 1;
+  background: lightgrey;
 
 }
