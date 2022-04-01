@@ -1,8 +1,7 @@
+const body = document.querySelector('body');
+const drawScreenButton = document.querySelector('#drawScreenButton')
 const outerContainer = document.querySelector("#outerContainer");
-let drawScreenButton = document.createElement('button');
-drawScreenButton.classList.add('drawScreenButton');
-drawScreenButton.innerText = 'Redraw Screen';
-outerContainer.appendChild(drawScreenButton);
+
 
 
 let flag = false;
@@ -13,6 +12,8 @@ let flag = false;
 
 // have this function draw a user defined grid of boxes.
 function drawScreen(size) {
+
+  
 
 
   for (let index = 0; index < size; index++) {
@@ -59,18 +60,9 @@ drawScreenButton.addEventListener('click', () => {
   let size = parseInt(prompt('Please enter the size of the grid you want, must be a number', 4))
 
   if (Number.isInteger(size) && size < 101) {
-    //removeEffects(boxes);
 
     drawScreen(size);
-    if (flag = true){
-      const boxes = document.querySelectorAll('.box');
-
-      boxes.forEach(box => {
-        box.classList.remove('hovered');
     
-      });
-      flag = false;
-    }
     
   }
 
@@ -82,7 +74,7 @@ drawScreenButton.addEventListener('click', () => {
   boxes.forEach(box => {
     console.log(box);
     box.addEventListener('mouseover', addEffects);
-    flag = true;
+    
 
   });
 
