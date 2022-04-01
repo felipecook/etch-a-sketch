@@ -15,23 +15,12 @@ function drawScreen() {
     outerContainer.appendChild(innerContainer);
 
     for (let innerIndex = 0; innerIndex < 4; innerIndex++) {
-      //This creates the columns
-      let columnDiv = document.createElement('div');
-      columnDiv.classList.add('column');
-      columnDiv.classList.add('etches');
-      innerContainer.appendChild(columnDiv);
+      //This creates the boxes
+      let box = document.createElement('div');
+      box.classList.add('box');
+      innerContainer.appendChild(box);
 
     }
-
-
-
-    // for (let innerIndex = 0; innerIndex < 4; innerIndex++) {
-    //   let columnDiv = document.createElement('div');
-    //   columnDiv.classList.add('column');
-    //   columnDiv.classList.add('etches');
-    //   columnDiv.appendChild(columnDiv);
-    // }
-    // console.log(index);
   }
 
 }
@@ -51,10 +40,10 @@ function addEffects(e) {
 
 drawScreen();
 
-const divs = document.querySelectorAll('.etches');
-console.log(divs);
+const boxes = document.querySelectorAll('.box');
+console.log(boxes);
 
-divs.forEach(div => {
-  console.log(div);
-  div.addEventListener('mouseover', addEffects);
+boxes.forEach(box => {
+  console.log(box);
+  box.addEventListener('mouseover', addEffects);
 });
