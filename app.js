@@ -4,7 +4,9 @@ drawScreenButton.classList.add('drawScreenButton');
 drawScreenButton.innerText = 'Redraw Screen';
 outerContainer.appendChild(drawScreenButton);
 
-console.log(outerContainer);
+
+let flag = false;
+
 
 
 
@@ -15,13 +17,7 @@ function drawScreen(size) {
 
   for (let index = 0; index < size; index++) {
 
-    const boxes = document.querySelectorAll('.box');
-    
 
-    boxes.forEach(box => {
-      console.log(box);
-      box.addEventListener('mouseover', addEffects);
-    });
 
     //this creates the rows
     let innerContainer = document.createElement('div');
@@ -50,6 +46,10 @@ function addEffects(e) {
   // }, 500);
 }
 
+function removeEffects(e) {
+  e.target.classList.remove('hovered');
+}
+
 // drawScreen();
 
 
@@ -58,14 +58,34 @@ drawScreenButton.addEventListener('click', () => {
 
   let size = parseInt(prompt('Please enter the size of the grid you want, must be a number', 4))
 
-  if (Number.isInteger(size) && size < 101){
+  if (Number.isInteger(size) && size < 101) {
+    //removeEffects(boxes);
 
     drawScreen(size);
-  } else {
-    alert("You did not enter a number. Try again.")
-    return;
+    if (flag = true){
+      const boxes = document.querySelectorAll('.box');
+
+      boxes.forEach(box => {
+        box.classList.remove('hovered');
+    
+      });
+      flag = false;
+    }
+    
   }
 
+
+  const boxes = document.querySelectorAll('.box');
+
+
   
+  boxes.forEach(box => {
+    console.log(box);
+    box.addEventListener('mouseover', addEffects);
+    flag = true;
+
+  });
+
+
 
 });
