@@ -1,3 +1,12 @@
+#outerContainer {
+  /* display: flex;
+  flex: 1;
+  justify-content: space-around;
+  align-items: center; */
+  gap: 20px;
+  width: 970px;
+}
+
 .container {
   display: flex;
   flex: 1;
@@ -15,17 +24,18 @@
 }
 
 
-.row {
+.column {
   display: flex;
   width: 200px;
   height: 200px;
   flex: 1;
   background: lightgrey;
+  margin: 20px;
 
 }
 
 
-.column {
+/* .column {
   display: flex;
   flex-direction: column;
   width: 200px;
@@ -33,4 +43,4 @@
   flex: 1;
   background: lightgrey;
 
-}
+} */
