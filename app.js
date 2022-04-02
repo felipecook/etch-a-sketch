@@ -42,7 +42,13 @@ function drawScreen(size) {
 function addEffects(e) {
 
   console.log(e);
-  e.target.classList.add('hovered')
+  let classes = e.target.classList;
+  if (classes.contains('hovered')){
+    
+  } else {
+    e.target.classList.add('hovered');
+  }
+  
 
   // setTimeout(function () {
   //   e.target.classList.remove('hovered');
