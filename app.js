@@ -15,6 +15,8 @@ function drawScreen(size) {
 
   
 
+  removeAllChildNodes(outerContainer);
+
 
   for (let index = 0; index < size; index++) {
 
@@ -22,7 +24,7 @@ function drawScreen(size) {
 
     //this creates the rows
     let innerContainer = document.createElement('div');
-    innerContainer.classList.add('container');
+    innerContainer.id = 'container';
     outerContainer.appendChild(innerContainer);
 
     for (let innerIndex = 0; innerIndex < size; innerIndex++) {
@@ -81,3 +83,11 @@ drawScreenButton.addEventListener('click', () => {
 
 
 });
+
+
+
+function removeAllChildNodes(parent) {
+  while (parent.firstChild) {
+      parent.removeChild(parent.firstChild);
+  }
+}
